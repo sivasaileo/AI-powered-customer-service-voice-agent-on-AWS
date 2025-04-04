@@ -1,0 +1,7 @@
+# Ignore Terraform cache and state files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore large provider binaries
+terraform/.terraform/providers/
