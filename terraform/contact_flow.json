@@ -1,0 +1,34 @@
+{
+    "Version": "2019-10-30",
+    "StartAction": "PlayPrompt",
+    "Actions": [
+      {
+        "Identifier": "PlayPrompt",
+        "Type": "PlayPrompt",
+        "Parameters": {
+          "Prompt": {
+            "Text": "Welcome to the reservation assistant. Please wait while we connect you to our bot."
+          }
+        },
+        "Transitions": {
+          "NextAction": "InvokeLexBot"
+        }
+      },
+      {
+        "Identifier": "InvokeLexBot",
+        "Type": "InvokeLexBot",
+        "Parameters": {
+          "BotName": "ReservationBot",
+          "BotAlias": "ReservationBotAlias"
+        },
+        "Transitions": {
+          "NextAction": "Disconnect"
+        }
+      },
+      {
+        "Identifier": "Disconnect",
+        "Type": "Disconnect"
+      }
+    ]
+  }
+  
