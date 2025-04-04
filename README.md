@@ -6,7 +6,10 @@ This project sets up an AI-powered reservation assistant using AWS services and 
 
 
 !Architecture Diagram
+
+
 ![alt text](image.png)
+
 
 
 - **Amazon Connect**: Handles incoming calls.
