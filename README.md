@@ -27,17 +27,21 @@ This project sets up an AI-powered reservation assistant using AWS services and 
 
 2. **Deploy the Infrastructure**
 
+    ```sh
     cd terraform
     terraform init
     terraform apply
+    ```
 
 Review the plan and confirm the changes to deploy the resources.
 
 3. **Deploy the Lambda Function**
 
+    ```sh
     cd ../lambda/process_reservation
     zip -r process_reservation.zip .
     aws lambda update-function-code --function-name ProcessReservation --zip-file fileb://process_reservation.zip
+    ```
 
 
 4. **Configure Amazon Connect**
@@ -58,6 +62,7 @@ Review the plan and confirm the changes to deploy the resources.
     Click Save.
 
 5. **Configure Amazon Lex**
+
     Verify the Lex Bot:
 
     Ensure the Lex bot and intents are created by Terraform.
@@ -68,6 +73,7 @@ Review the plan and confirm the changes to deploy the resources.
     Verify that the Lex bot is linked to the ProcessReservation Lambda function created by Terraform.
 
 6. **Testing and Verification**
+
     Test the Call Flow:
 
     Call the phone number assigned to Amazon Connect.
@@ -80,6 +86,7 @@ Review the plan and confirm the changes to deploy the resources.
     Verify that a confirmation email is sent to the provided email address.
 
 7. **Monitor and Optimize**
+
     Monitor Logs and Metrics:
 
     Use AWS CloudWatch to monitor logs and metrics for Lambda, Lex, and Connect.
@@ -89,4 +96,5 @@ Review the plan and confirm the changes to deploy the resources.
     Based on usage and performance, optimize the configuration and scale resources as needed.
 
 8. **Contributing**
+
     Feel free to fork this repository and make updates. Contributions are welcome!
